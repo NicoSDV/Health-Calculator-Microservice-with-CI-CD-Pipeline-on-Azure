@@ -1,30 +1,23 @@
-IMAGE_NAME=health-calculator-service
-PORT=5000
+# Makefile
 
 .PHONY: init run test build clean
 
-# Initialize the environment by installing dependencies
+# Commande pour installer les dépendances
 init:
 	@echo "Installing dependencies..."
 	pip install -r requirements.txt
 
-# Run the Flask app
+# Commande pour exécuter l’application Flask
 run:
 	@echo "Running the Flask app..."
-	python app.py
+	python3 app.py
 
-# Run the Python tests
+# Commande pour lancer les tests
 test:
 	@echo "Running tests..."
-	python -m unittest discover
+	python3 -m unittest discover
 
-# Build the Docker image
+# Commande pour construire l’image Docker
 build:
 	@echo "Building the Docker image..."
-	docker build -t $(IMAGE_NAME) .
-
-# Clean up Docker resources (stopped containers, etc.)
-clean:
-	@echo "Cleaning up Docker containers..."
-	docker container prune -f
-
+	docker build -t health-calculator-service .
