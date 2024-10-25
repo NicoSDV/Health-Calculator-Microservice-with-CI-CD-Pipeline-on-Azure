@@ -2,11 +2,9 @@ from flask import Flask, request, jsonify
 from health_utils import calculate_bmi, calculate_bmr
 
 app = Flask(__name__)
-
 @app.route('/')
 def home():
-    return "HealtApp Welcome Page !"
-    
+    return "Bienvenue sur healthapp"
 @app.route('/bmi', methods=['POST'])
 def bmi():
     data = request.json
@@ -26,5 +24,4 @@ def bmr():
     return jsonify({"bmr": result})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
-
+    app.run(host='0.0.0.0', port=5000, debug=True)
