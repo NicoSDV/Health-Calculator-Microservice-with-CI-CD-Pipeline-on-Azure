@@ -1,9 +1,6 @@
 
 # Health Calculator Microservice
 
-## Description
-Ce projet consiste à développer et déployer une application microservice de calcul de santé (BMI et BMR) via une API REST. Il inclut une pipeline CI/CD pour automatiser le déploiement sur une WebApp Azure. Ce projet est réalisé dans le cadre d'un exercice pédagogique.
-
 ## Fonctionnalités
 - **Calcul du BMI** (Body Mass Index) : basé sur la taille et le poids.
 - **Calcul du BMR** (Basal Metabolic Rate) : basé sur la taille, le poids, l'âge et le genre.
@@ -77,5 +74,3 @@ python -m unittest test.py
 └── main_healthcalculator.yml # Pipeline CI/CD
 ```
 
-## Auteurs
-Projet développé par **NicoSDV** dans le cadre d'un projet éducatif.
